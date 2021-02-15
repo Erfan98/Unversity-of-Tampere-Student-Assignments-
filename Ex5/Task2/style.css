@@ -1,0 +1,44 @@
+.container{
+    width: 800px;
+}
+.tabs{
+    
+    margin: 0;
+    padding: 0;
+
+}
+ .tab1{
+    background-color: #87CEFA;
+    display: inline;
+    float: left;
+    width: 400px;
+    padding: 20px 0px;
+}
+ .tab2{
+    background-color: #FFA07A;
+    display: inline;
+    float: left;
+    width: 400px;
+    padding: 20px 0px;
+}
+#tab-content{
+    width: 800px;
+   
+}
+.content1{
+    display: none;
+    background-color: #87CEFA;
+    margin: 0px;
+    padding:50px 0px;
+}
+.content2{
+    display: none;
+    background-color: #FFA07A;
+    margin: 0px;
+    padding:50px 0px;
+
+}
+
+.active{
+    display: block;
+}
