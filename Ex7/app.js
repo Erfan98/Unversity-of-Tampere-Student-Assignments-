@@ -41,16 +41,20 @@ fetch(url)
 
 function gentable(){
     var t= document.getElementById('table')
-    t.innerHTML='';
+    t.innerHTML=`<tr>
+                <th>Name</th>
+                <th>info</th>
+                <th>Points</th>
+                  </tr>`
     var x=''
-    console.log(datas.students[2].name)
     len=datas.students.length
     for(var i=0; i<len;i++){
         
-        var row=`<tr>
+        var row=`<tr class="points ${(datas.students[i].exercise_points == null ||datas.students[i].exercise_points<50 ? 'red': 'blue')}">
                     <td>${datas.students[i].name}</td>
                     <td>${datas.students[i].course_assignment}</td>
-                    <td>${datas.students[i].exercise_points}</td>
+                    <td >${datas.students[i].exercise_points}</td>
+
                 </tr>`
         t.innerHTML += row;
 
@@ -66,6 +70,8 @@ function add(){
     console.log(n,info,points)
     datas.students.push({id: 4, "name":n,"course_assignment":info,"exercise_points": points});
     gentable();
-    console.log(datas)
+    //console.log(datas)
 
 }
+
+
